@@ -1,4 +1,11 @@
 import React from "react"
+import styled from "styled-components"
 
-const IndexPage = () => <div>Hello world!</div>
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const IndexPage = () => <Container>Hello world!</Container>
 export default IndexPage
