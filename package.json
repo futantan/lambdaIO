@@ -16,6 +16,8 @@
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.1.37",
     "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-transformer-remark": "^2.6.14",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "styled-components": "^4.1.3"
