@@ -1,34 +1,37 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
+import Header from '../components/Header'
+import { graphql, Link } from 'gatsby'
 
-const Header = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
+const Layout = props => {
+  const { edges } = props.data.allMarkdownRemark
+  return (
+    <div>
+      <Header />
+      {edges.map(edge => {
+        const { frontmatter } = edge.node
+        return (
+          <div key={frontmatter.path}>
+            <Link to={frontmatter.path}>{frontmatter.title}</Link>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export const query = graphql`
+  query HomepageQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            path
+            tags
             title
-            description
           }
         }
       }
-    `}
-    render={data => <div>{data.site.siteMetadata.title}</div>}
-  />
-)
-
-const IndexPage = () => (
-  <Container>
-    Hello world!
-    <Header />
-  </Container>
-)
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    }
+  }
 `
-
-export default IndexPage
+export default Layout
