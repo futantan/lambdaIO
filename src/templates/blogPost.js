@@ -1,8 +1,10 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
-const Template = ({ data }) => {
-  const { markdownRemark } = data
+const Template = props => {
+  console.log(props)
+  const { markdownRemark } = props.data
+  const { prev, next } = props.pageContext
   const title = markdownRemark.frontmatter.title
   const html = markdownRemark.html
   return (
@@ -15,6 +17,8 @@ const Template = ({ data }) => {
           fontFamily: 'avenir',
         }}
       />
+      {next && <Link to={next.frontmatter.path}>Next</Link>}
+      {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
     </div>
   )
 }
