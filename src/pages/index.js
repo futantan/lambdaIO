@@ -15,6 +15,9 @@ const Layout = props => {
           </div>
         )
       })}
+      <div>
+        <Link to={'/tags'}>Browse by Tag</Link>
+      </div>
     </div>
   )
 }
