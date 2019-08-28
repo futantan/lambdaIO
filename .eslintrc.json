@@ -5,6 +5,7 @@
   },
   "extends": ["prettier", "eslint:recommended", "plugin:react/recommended"],
   "rules": { "react/prop-types": 0 },
+  "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
