@@ -1,11 +1,12 @@
 import React from 'react'
 import Header from '../components/Header'
 import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
 
-const Layout = props => {
+const Index = props => {
   const { edges } = props.data.allMarkdownRemark
   return (
-    <div>
+    <Layout>
       <Header />
       {edges.map(edge => {
         const { frontmatter } = edge.node
@@ -18,7 +19,7 @@ const Layout = props => {
       <div>
         <Link to={'/tags'}>Browse by Tag</Link>
       </div>
-    </div>
+    </Layout>
   )
 }
 
@@ -37,4 +38,4 @@ export const query = graphql`
     }
   }
 `
-export default Layout
+export default Index
