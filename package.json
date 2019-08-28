@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "lambda-io",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "blog of futantan",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -40,12 +40,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
