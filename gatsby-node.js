@@ -1,11 +1,10 @@
 const path = require('path')
 
-const createTagPages = (createPage, posts) => {
-  const allTagsIndexTemplate = path.resolve('src/templates/allTagsIndex.jsx')
-  const singleTagIndexTemplate = path.resolve(
-    'src/templates/singleTagIndex.jsx'
-  )
+const allTagsIndexTemplate = path.resolve('src/templates/allTagsIndex.jsx')
+const singleTagIndexTemplate = path.resolve('src/templates/singleTagIndex.jsx')
+const blogPostTemplate = path.resolve('src/templates/blogPost.js')
 
+const createTagPages = (createPage, posts) => {
   const postsByTag = {}
   posts.forEach(({ node }) => {
     if (node.frontmatter.tags) {
@@ -22,9 +21,7 @@ const createTagPages = (createPage, posts) => {
   createPage({
     path: '/tags',
     component: allTagsIndexTemplate,
-    context: {
-      tags: tags.sort(),
-    },
+    context: { tags: tags.sort() },
   })
   tags.forEach(tagName => {
     const posts = postsByTag[tagName]
@@ -39,26 +36,22 @@ const createTagPages = (createPage, posts) => {
   })
 }
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-  const blogPostTemplate = path.resolve('src/templates/blogPost.js')
-  return graphql(
-    `
-      query {
-        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-          edges {
-            node {
-              frontmatter {
-                path
-                title
-                tags
-              }
+exports.createPages = ({ graphql, actions: { createPage } }) =>
+  graphql(`
+    query {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+        edges {
+          node {
+            frontmatter {
+              path
+              title
+              tags
             }
           }
         }
       }
-    `
-  ).then(result => {
+    }
+  `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
 
     createTagPages(createPage, posts)
@@ -76,4 +69,3 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
   })
-}
