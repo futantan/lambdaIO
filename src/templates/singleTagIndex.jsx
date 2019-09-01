@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../layout/Layout'
 
 const SingleTagTemplate = ({ pageContext }) => {
   const { posts, tagName } = pageContext

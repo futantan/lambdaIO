@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../layout/Layout'
 
 const Index = props => {
   const { edges } = props.data.allMarkdownRemark
