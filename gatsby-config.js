@@ -7,16 +7,15 @@ module.exports = {
     'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/src/blog`,
-      },
+      options: { name: 'pages', path: `${__dirname}/src/blog` },
     },
     {
       resolve: 'gatsby-plugin-layout',
-      options: {
-        component: `${__dirname}/src/layout/Layout.jsx`,
-      },
+      options: { component: `${__dirname}/src/layout/Layout.jsx` },
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: { pathToConfigModule: 'src/utils/typography' },
     },
   ],
 }

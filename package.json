@@ -15,10 +15,14 @@
   "dependencies": {
     "gatsby": "^2.1.37",
     "gatsby-plugin-layout": "^1.1.5",
+    "gatsby-plugin-typography": "^2.3.5",
     "gatsby-source-filesystem": "^2.1.9",
     "gatsby-transformer-remark": "^2.6.14",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "typography-theme-grand-view": "^0.16.19"
   },
   "devDependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
