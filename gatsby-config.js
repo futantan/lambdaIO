@@ -12,5 +12,11 @@ module.exports = {
         path: `${__dirname}/src/blog`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: `${__dirname}/src/layout/Layout.jsx`,
+      },
+    },
   ],
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Layout from '../layout/Layout'
 
 const Template = props => {
   console.log(props)
@@ -9,7 +8,7 @@ const Template = props => {
   const title = markdownRemark.frontmatter.title
   const html = markdownRemark.html
   return (
-    <Layout>
+    <>
       <h1>{title}</h1>
       <div
         className="blogpost"
@@ -20,7 +19,7 @@ const Template = props => {
       />
       {next && <Link to={next.frontmatter.path}>Next</Link>}
       {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
-    </Layout>
+    </>
   )
 }
 

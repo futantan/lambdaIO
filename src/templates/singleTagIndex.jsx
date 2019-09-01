@@ -1,11 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Layout from '../layout/Layout'
+import React from "react";
+import { Link } from "gatsby";
 
 const SingleTagTemplate = ({ pageContext }) => {
   const { posts, tagName } = pageContext
   return (
-    <Layout>
+    <>
       <div>Posts about {`${tagName}`}</div>
       <div>
         <ul>
@@ -16,7 +15,7 @@ const SingleTagTemplate = ({ pageContext }) => {
           ))}
         </ul>
       </div>
-    </Layout>
+    </>
   )
 }
 
