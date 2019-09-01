@@ -4,7 +4,10 @@ module.exports = {
     description: 'This is my cool blog.',
   },
   plugins: [
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: { plugins: [{ resolve: `gatsby-remark-prismjs`, options: {} }] },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: { name: 'pages', path: `${__dirname}/src/blog` },
