@@ -1,15 +1,16 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
+import Profile from './Profile'
+import styles from './Header.module.css'
 
 const TitleAndDescription = ({ data }) => {
   const title = data.site.siteMetadata.title
-  const description = data.site.siteMetadata.description
 
   return (
-    <div>
-      <div>{title}</div>
-      <p>{description}</p>
-    </div>
+    <header>
+      <h1 className={styles.title}>{title}</h1>
+      <Profile />
+    </header>
   )
 }
 
@@ -25,7 +26,7 @@ const Header = () => (
         }
       }
     `}
-    render={data => <TitleAndDescription data={data} /> }
+    render={data => <TitleAndDescription data={data} />}
   />
 )
 
