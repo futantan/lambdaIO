@@ -2,23 +2,27 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 const Template = props => {
-  console.log(props)
   const { markdownRemark } = props.data
   const { prev, next } = props.pageContext
   const title = markdownRemark.frontmatter.title
   const html = markdownRemark.html
   return (
     <>
-      <h1>{title}</h1>
-      <div
-        className="blogpost"
-        dangerouslySetInnerHTML={{ __html: html }}
-        style={{
-          fontFamily: 'avenir',
-        }}
-      />
-      {next && <Link to={next.frontmatter.path}>Next</Link>}
-      {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
+      <h1>
+        <Link to="/">lambdaIO</Link>
+      </h1>
+      <main>
+        <h1>{title}</h1>
+        <div
+          className="blogpost"
+          dangerouslySetInnerHTML={{ __html: html }}
+          style={{
+            fontFamily: 'avenir',
+          }}
+        />
+        {next && <Link to={next.frontmatter.path}>Next</Link>}
+        {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
+      </main>
     </>
   )
 }
