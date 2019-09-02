@@ -1,6 +1,6 @@
-import React from "react";
-import Header from "../components/Header";
-import { graphql, Link } from "gatsby";
+import React from 'react'
+import Header from '../components/Header'
+import { graphql, Link } from 'gatsby'
 
 const Index = props => {
   const { edges } = props.data.allMarkdownRemark
@@ -11,12 +11,12 @@ const Index = props => {
         const { frontmatter } = edge.node
         return (
           <div key={frontmatter.path}>
-            <Link to={frontmatter.path}>{frontmatter.title}</Link>
+            <Link to={`blog/${frontmatter.path}`}>{frontmatter.title}</Link>
           </div>
         )
       })}
       <div>
-        <Link to={'/tags'}>Browse by Tag</Link>
+        <Link to={'/blog/tags'}>Browse by Tag</Link>
       </div>
     </>
   )

@@ -6,7 +6,7 @@ const blogPostTemplate = path.resolve('src/templates/blogPost.js')
 
 const createTagsPage = (createPage, tags) => {
   createPage({
-    path: '/tags',
+    path: '/blog/tags',
     component: allTagsIndexTemplate,
     context: { tags: tags.sort() },
   })
@@ -14,7 +14,7 @@ const createTagsPage = (createPage, tags) => {
 
 const createSingleTagPage = (createPage, tagName, posts) => {
   createPage({
-    path: `/tags/${tagName}`,
+    path: `/blog/tags/${tagName}`,
     component: singleTagIndexTemplate,
     context: { posts, tagName },
   })
@@ -40,7 +40,7 @@ const createTagPages = (createPage, posts) => {
 const createSinglePost = (createPage, posts, index) => {
   const path = posts[index].node.frontmatter.path
   createPage({
-    path,
+    path: `blog${path}`,
     component: blogPostTemplate,
     context: {
       pathSlug: path,
