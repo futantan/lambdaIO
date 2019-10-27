@@ -4,9 +4,16 @@ module.exports = {
     description: 'This is my cool blog.',
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
-      options: { plugins: [{ resolve: `gatsby-remark-prismjs`, options: {} }] },
+      options: {
+        plugins: [
+          { resolve: `gatsby-remark-prismjs` },
+          { resolve: `gatsby-remark-images` },
+        ],
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
