@@ -40,7 +40,7 @@ const createTagPages = (createPage, posts) => {
 const createSinglePost = (createPage, posts, index) => {
   const path = posts[index].node.frontmatter.path
   createPage({
-    path: `blog${path}`,
+    path: `blog/${path}`,
     component: blogPostTemplate,
     context: {
       pathSlug: path,
