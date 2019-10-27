@@ -7,7 +7,7 @@ path: react-router-not-updated
 keywords:
 ---
 
-![](/media/redux-and-react-router.png)
+![](./redux-and-react-router.png)
 React Router 可以帮助我们在单页面应用中管理 url，但是如果理解不当，也会存在一些潜在的 bug。
 
 <!--more-->

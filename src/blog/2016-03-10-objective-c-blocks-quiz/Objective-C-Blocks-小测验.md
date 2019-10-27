@@ -6,7 +6,7 @@ path: objective-c-blocks-quiz
 keywords: Objective-c, block, quiz
 ---
 
-![](/media/14576119117357.jpg)
+![](./14576119117357.jpg)
 
 图题是一个很有意思的网站的截图，有人专门申请了一个域名：[fuckingblocksyntax](http://fuckingblocksyntax.com/) 来表示对 OC 中 block 奇特写法的不满，当然题图无关，今天看到一个有意思的 block 测试网站，记录一下。
 

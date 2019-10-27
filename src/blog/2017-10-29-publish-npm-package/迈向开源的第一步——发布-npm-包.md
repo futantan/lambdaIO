@@ -204,7 +204,9 @@ const filtered = senstiveWords(
 console.log(filtered)
 ```
 
-\$ node index.js
+```
+$ node index.js
+```
 
 ## 文档
 

@@ -5,7 +5,7 @@ tags: [iOS]
 date: 2015-11-02 15:05:10
 ---
 
-![pulltorefresh](/media/pulltorefresh.gif)
+![pulltorefresh](./pulltorefresh.gif)
 
 仿照「把大象放进冰箱」的思路，Pull To Refresh 的过程可以分解成如下步骤：
 
@@ -22,7 +22,7 @@ date: 2015-11-02 15:05:10
 
 目前，视图应该长这样：
 
-<img src="/media/14464632177368.jpg" width=300/>
+<img src="./14464632177368.jpg" width=300/>
 
 代码中只是简单设置了下有多少行数据，每行显示一些简单的文字。
 
@@ -245,7 +245,7 @@ shouldRefreshViewBeLocked(true)
 ```
 
 这时候编译运行，下拉到一定程度之后，会固定住视图。
-<img src="/media/14465200898212.jpg" width=300/>
+<img src="./14465200898212.jpg" width=300/>
 
 下面要做的就是在用户完成访问网络等操作之后，显式调用方法来取消固定。修改 `endRefreshing` 方法如下：
 

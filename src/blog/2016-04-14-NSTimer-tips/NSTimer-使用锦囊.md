@@ -5,7 +5,7 @@ date: 2016-04-14 9:36:05
 path: NSTimer-tips
 ---
 
-![](/media/14605987599888.jpg)
+![](./14605987599888.jpg)
 来看看你是否被 NSTimer 坑过吧 ^\_^
 
 <!--more-->
@@ -13,7 +13,7 @@ path: NSTimer-tips
 完整的示例代码可以可以从 [这里](https://github.com/futantan/PrayerBlogCode) 获得。
 
 新建一个工程，再添加一个 VC，SecondViewController 效果图如下：
-![14605514256732](/media/14605514256732-1.jpg)
+![14605514256732](./14605514256732-1.jpg)
 
 可以观察到，最左边，为了方便控制器间的跳转，我们将其嵌入 Navigation Controller 中。第一个 VC 中有一个按钮，`next VC` 点击之后，会跳转到下一个控制器中；第二个控制器中添加了两个按钮，完整的代码逻辑如下：
 
@@ -65,7 +65,7 @@ class SecondViewController: UIViewController {
 
 引用的示意图如下
 
-![](/media/14605527787801.jpg)
+![](./14605527787801.jpg)
 
 第二点是 swift 2.2 的更新，终于不怕写错函数名了。你可以[从这里](http://swifter.tips/selector/)了解更多。
 
@@ -99,7 +99,7 @@ extension NSTimer {
 ```
 
 但是这里出现一个问题，
-![](/media/14605550546067.jpg)
+![](./14605550546067.jpg)
 
 在 [SOF](http://stackoverflow.com/questions/28211973/swift-closure-as-anyobject) 上有个解决办法，加个中间层，修改后的代码如下：
 

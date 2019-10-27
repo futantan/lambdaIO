@@ -16,7 +16,7 @@ Demo 的 GitHub 地址：[RxSwiftDemo](https://github.com/futantan/PrayerBlogCod
 
 这里我们将实现 RxSwift Demo 中最简单的一个例子，加法器。
 
-<img src="/media/14622874699158.jpg" width="400" />
+<img src="./14622874699158.jpg" width="400" />
 
 如图所示，有三个 UITextField，代表着三个输入的数字，最后是一个显示结果的 Label。这里的逻辑很简单，就不给大家展示代码了。
 

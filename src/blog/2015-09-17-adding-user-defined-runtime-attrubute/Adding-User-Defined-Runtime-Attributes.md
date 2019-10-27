@@ -20,18 +20,18 @@ Interface Builder 没有相关属性选项的时候，我们可以为其添加 `
 
 1. 在 Interface Builder 中打开 StoryBoard 或 xib 文件
 2. 选中需要定义属性的目标
-3. 选择 View > Utilities > Show Identity Inspector <center>![选择User Defined Runtime Attributes](/media/14424974256894.jpg)</center>
+3. 选择 View > Utilities > Show Identity Inspector <center>![选择User Defined Runtime Attributes](./14424974256894.jpg)</center>
 4. 选择加号，输入相应的属性，选择对应的类型，最后输入要设置的值。
 
 例如：
 
 在有个图片，我希望它能够显示为圆形图标。而美工给我的是正方形，咋办呢？美工，去！再给我切份儿图来！这显然不是一个牛逼程序员的作风，我们可以使用上面的方式来完成。
 
-<center>![原始图片](/media/14424985152291.jpg)</center>
+<center>![原始图片](./14424985152291.jpg)</center>
 
 添加动态属性如下
 
-<center>![添加属性](/media/14424985519169.jpg)</center>
+<center>![添加属性](./14424985519169.jpg)</center>
 最终运行效果如图
 
-<center>![运行效果](/media/14424985975405.jpg)</center>
+<center>![运行效果](./14424985975405.jpg)</center>

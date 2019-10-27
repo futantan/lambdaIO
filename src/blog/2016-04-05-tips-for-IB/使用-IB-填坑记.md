@@ -27,7 +27,7 @@ var bgColor: UIColor = UIColor.grayColor() {
 
 你可以参考我的[这篇文章](http://www.futantan.com/2015/09/17/adding-user-defined-runtime-attrubute/)来看看 运行时属性 的功能。
 其实，我们使用 `@IBInspectable` 的时候，其原理也是使用 Runtime Attributes 来进行属性的赋值：
-![](/media/14598631079898.jpg)
+![](./14598631079898.jpg)
 
 这里需要注意的是，如果我们将其中的 `curValue` 从 `@IBInspectable` 中去掉，记得一定要回到上图这里，将这里的 `curValue` 手动删除！ Xcode 目前还没这么智能，如果运行时发现有些奇怪的赋值现象，很有可能坑在这里。
 

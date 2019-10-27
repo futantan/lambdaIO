@@ -45,4 +45,4 @@ Happy Hacking!
 [2]: https://hubot.github.com/docs/
 [3]: https://github.com/slackhq/hubot-slack
 [4]: https://github.com/slackhq/hubot-slack
-[image-1]: /media/14599097880604.jpg
+[image-1]: ./14599097880604.jpg

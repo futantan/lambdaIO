@@ -25,7 +25,7 @@ let date = stringToDateFormatter.dateFromString(dateString)
 
 其实很简单，关键在于 "yyyy-MM-dd'T'kk:mm:ssZ"，如何快速正确的写出这个 format 字符串呢，给大家推荐一个网站 [Formatting Dates and Times](http://userguide.icu-project.org/formatparse/datetime)
 
-![](/media/14571797012126.jpg)
+![](./14571797012126.jpg)
 
 amazing！再也不用担心不会写日期格式化字符串了！
 

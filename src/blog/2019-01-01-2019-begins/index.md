@@ -7,7 +7,7 @@ path: 2019-begins
 keywords:
 ---
 
-![](/media/2019-caleb-jones-131206-unsplash.jpg)
+![](./2019-caleb-jones-131206-unsplash.jpg)
 
 人们总是愿意期望未来，而不是回顾过去，所以总是在一个地方摔倒，再爬起来，拍拍尘土，咒骂一句，头也不回的继续走下去。
 
