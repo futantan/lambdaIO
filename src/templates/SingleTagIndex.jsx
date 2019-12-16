@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const SingleTagTemplate = ({ pageContext }) => {
+const SingleTagIndex = ({ pageContext }) => {
   const { posts, tagName } = pageContext
   return (
     <>
@@ -19,4 +19,4 @@ const SingleTagTemplate = ({ pageContext }) => {
   )
 }
 
-export default SingleTagTemplate
+export default SingleTagIndex

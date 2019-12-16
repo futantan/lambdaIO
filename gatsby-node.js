@@ -1,8 +1,8 @@
 const path = require('path')
 
-const allTagsIndexTemplate = path.resolve('src/templates/allTagsIndex.jsx')
-const singleTagIndexTemplate = path.resolve('src/templates/singleTagIndex.jsx')
-const blogPostTemplate = path.resolve('src/templates/blogPost.jsx')
+const allTagsIndexTemplate = path.resolve('src/templates/AllTagsIndex.jsx')
+const singleTagIndexTemplate = path.resolve('src/templates/SingleTagIndex.jsx')
+const blogPostTemplate = path.resolve('src/templates/BlogPost.jsx')
 
 const createTagsPage = (createPage, tags) => {
   createPage({
