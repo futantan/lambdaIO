@@ -20,8 +20,8 @@ const Template = props => {
             fontFamily: 'avenir',
           }}
         />
-        {next && <Link to={next.frontmatter.path}>Next</Link>}
-        {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
+        {next && <Link to={'blog/' + next.frontmatter.path}>Next</Link>}
+        {prev && <Link to={'blog/' + prev.frontmatter.path}>Prev</Link>}
       </main>
     </>
   )
