@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'LambdaIO',
-    description: 'This is my cool blog.',
+    title: '傅坦坦的个人博客',
+    description: '傅坦坦的个人博客',
   },
   plugins: [
     `gatsby-plugin-postcss`,

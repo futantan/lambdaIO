@@ -11,7 +11,7 @@ const Index = props => {
           frontmatter: { path, title, date },
         } = edge.node
         return (
-          <div key={path} className="flex items-center">
+          <div key={path} className="sm:flex items-center mb-4">
             <div className="mr-3 font-mono text-xs text-gray-500">
               {dayjs(date).format('MMM d, YYYY')}
             </div>
