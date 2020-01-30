@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "dayjs": "^1.8.19",
     "gatsby": "2.17.4",
     "gatsby-image": "2.2.29",
     "gatsby-plugin-layout": "1.1.13",

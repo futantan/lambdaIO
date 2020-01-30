@@ -1,5 +1,5 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
+import React from "react";
+import { graphql, Link } from "gatsby";
 
 const Template = props => {
   const { markdownRemark } = props.data
@@ -8,9 +8,6 @@ const Template = props => {
   const html = markdownRemark.html
   return (
     <>
-      <h1>
-        <Link to="/">lambdaIO</Link>
-      </h1>
       <main>
         <h1>{title}</h1>
         <div

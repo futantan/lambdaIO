@@ -1,23 +1,25 @@
 import React from 'react'
-import Header from '../components/Header'
 import { graphql, Link } from 'gatsby'
+import dayjs from 'dayjs'
 
 const Index = props => {
   const { edges } = props.data.allMarkdownRemark
   return (
     <>
-      <Header />
       {edges.map(edge => {
-        const { frontmatter } = edge.node
+        const {
+          frontmatter: { path, title, date },
+        } = edge.node
         return (
-          <div key={frontmatter.path}>
-            <Link to={`blog/${frontmatter.path}`}>{frontmatter.title}</Link>
+          <div key={path} className="flex items-center">
+            <div className="mr-3 font-mono text-xs text-gray-500">
+              {dayjs(date).format('MMM d, YYYY')}
+            </div>
+            <Link to={`blog/${path}`}>{title}</Link>
           </div>
         )
       })}
-      <div>
-        <Link to={'/blog/tags'}>Browse by Tag</Link>
-      </div>
+      <div>{/*<Link to={'/blog/tags'}>Browse by Tag</Link>*/}</div>
     </>
   )
 }
@@ -31,6 +33,7 @@ export const query = graphql`
             path
             tags
             title
+            date
           }
         }
       }
