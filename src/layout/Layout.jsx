@@ -1,9 +1,8 @@
 import React from 'react'
-import styles from './Layout.module.css'
 import Profile from '../components/Profile'
 
 const Layout = ({ children }) => (
-  <div className={styles.layout}>
+  <div className="mx-auto max-w-2xl px-5 py-10">
     <Profile />
     {children}
   </div>

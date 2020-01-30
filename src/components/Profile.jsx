@@ -1,12 +1,11 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styles from './Profile.module.css'
+import React from "react";
+import { Link } from "gatsby";
 
 const Profile = () => (
   <Link to="/">
-    <div className={styles.layout}>
+    <div className='flex flex-row items-center'>
       <img
-        className={styles.avatar}
+        className='w-16 mr-3 rounded-full'
         src="https://avatars2.githubusercontent.com/u/6268441?s=460&v=4"
         alt="avatar"
       />
