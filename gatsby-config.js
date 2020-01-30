@@ -4,6 +4,7 @@ module.exports = {
     description: 'This is my cool blog.',
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

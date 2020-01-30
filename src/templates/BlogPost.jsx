@@ -20,8 +20,10 @@ const Template = props => {
             fontFamily: 'avenir',
           }}
         />
-        {next && <Link to={'blog/' + next.frontmatter.path}>Next</Link>}
-        {prev && <Link to={'blog/' + prev.frontmatter.path}>Prev</Link>}
+        <div className='flex justify-between'>
+          {prev && <Link to={'blog/' + prev.frontmatter.path}>上一篇</Link>}
+          {next && <Link to={'blog/' + next.frontmatter.path}>下一篇</Link>}
+        </div>
       </main>
     </>
   )
