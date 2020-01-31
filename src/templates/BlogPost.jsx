@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import "katex/dist/katex.min.css"
 
 const Template = props => {
   const { markdownRemark } = props.data
