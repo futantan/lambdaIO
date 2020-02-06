@@ -1,11 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import dayjs from 'dayjs'
+import SEO from '../components/SEO'
 
 const Index = props => {
   const { edges } = props.data.allMarkdownRemark
   return (
     <>
+      <SEO />
       {edges.map(edge => {
         const {
           frontmatter: { path, title, date },

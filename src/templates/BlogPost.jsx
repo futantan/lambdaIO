@@ -1,14 +1,16 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import "katex/dist/katex.min.css"
+import SEO from "../components/SEO";
 
 const Template = props => {
   const { markdownRemark } = props.data
   const { prev, next } = props.pageContext
-  const title = markdownRemark.frontmatter.title
+  const { title, desc } = markdownRemark.frontmatter
   const html = markdownRemark.html
   return (
     <>
+      <SEO title={title} description={desc} />
       <main>
         <h1>{title}</h1>
         <div
@@ -33,6 +35,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        desc
       }
     }
   }

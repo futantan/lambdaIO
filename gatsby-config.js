@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: '傅坦坦的个人博客',
-    description: '傅坦坦的个人博客',
+    title: '傅坦坦的 Blog',
+    titleTemplate: '%s | 傅坦坦的 Blog',
+    description: '傅坦坦的 Blog',
+    url: 'https://futantan.com', // No trailing slash allowed!
+    image: '/images/avatar.png', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@EclipsePrayer',
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -41,5 +45,6 @@ module.exports = {
         trackingId: 'UA-157805661-1',
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 }

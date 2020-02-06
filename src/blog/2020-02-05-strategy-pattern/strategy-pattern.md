@@ -2,6 +2,7 @@
 title: Rethinking in Design Patterns 系列之策略模式
 date: 2020-02-05 20:02:21
 tags: ['design pattern', 'rethinking in desigin patterns']
+desc: 策略模式与函数式的思考
 path: strategy-pattern
 ---
 
