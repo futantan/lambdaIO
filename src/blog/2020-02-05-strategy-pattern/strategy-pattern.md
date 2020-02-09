@@ -1,10 +1,12 @@
 ---
-title: Rethinking in Design Patterns 系列之策略模式
+title: 《消失的设计模式》系列之策略模式
 date: 2020-02-05 20:02:21
 tags: ['design pattern', 'rethinking in desigin patterns']
 desc: 策略模式与函数式的思考
 path: strategy-pattern
 ---
+
+> 设计模式是面向对象的有用工具，但是编程语言的发展和多种编程范式混合编程的可能，使很多的模式被语言特性取代，或者被其他编程范式解决。
 
 ## 要解决的问题
 
@@ -156,6 +158,30 @@ console.log(context.calculate(1, 2)) // -1
 
 由于场景的设定，这里我们就不去将 `Context` 函数式化了。
 [完整代码](https://github.com/futantan/rethinking-in-design-pattern/blob/master/strategy/strategy.fp.ts)
+
+## 数组的排序算法与策略模式
+
+其实日常编码中，遇到最多的策略模式是排序算法，例如：
+
+```typescript
+;[1, 5, 3, 4, 2].sort((a, b) => a - b)
+```
+
+在 TypeScript 中，自定义排序策略非常容易，传入一个函数就可以了，我们再来看 Java 的表现：
+
+```java
+class CustomComparator implements Comparator<X> {
+
+  public int compare(X a, x b) {
+    return ...
+  }
+}
+
+CustomComparator comparator = new CustomComparator()
+Arrays.sort(arr, new CustomComparator())
+```
+
+其中 `comparator` 是一个实现了 `Comparator` 接口的类的实例。为了满足类型，需要定义类，然后创建实例对象，非常冗余。
 
 ## 总结
 
