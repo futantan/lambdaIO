@@ -17,7 +17,7 @@ const Index = props => {
             <div className="mr-3 font-mono text-xs text-gray-500">
               {dayjs(date).format('MMM d, YYYY')}
             </div>
-            <Link to={`blog/${path}`}>{title}</Link>
+            <Link to={`/blog/${path}`}>{title}</Link>
           </div>
         )
       })}
