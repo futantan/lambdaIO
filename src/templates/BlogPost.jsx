@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import "katex/dist/katex.min.css"
 import SEO from "../components/SEO";
-import { DiscussionEmbed } from "disqus-react"
+import { Disqus } from 'gatsby-plugin-disqus'
 
 const Template = props => {
   const { markdownRemark } = props.data
@@ -11,10 +11,10 @@ const Template = props => {
   const html = markdownRemark.html
 
   const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: path, title },
+    identifier: path,
+    title: title,
   }
-  console.log(disqusConfig)
+
   return (
     <>
       <SEO title={title} description={desc} />
@@ -33,7 +33,7 @@ const Template = props => {
         </div>
       </main>
 
-      <DiscussionEmbed {...disqusConfig} />
+      <Disqus config={disqusConfig} />
     </>
   )
 }
