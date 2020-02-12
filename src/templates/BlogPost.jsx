@@ -14,6 +14,7 @@ const Template = props => {
     shortname: process.env.GATSBY_DISQUS_NAME,
     config: { identifier: path, title },
   }
+  console.log(disqusConfig)
   return (
     <>
       <SEO title={title} description={desc} />
