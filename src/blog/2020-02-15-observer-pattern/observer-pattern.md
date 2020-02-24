@@ -121,7 +121,7 @@ subject.notifyObservers('world')
 type Observer = (newBlog: string) => void
 ```
 
-非常直白，就是一个函数定义。那么对于的 `Observer` 就可以改成：
+非常直白，就是一个函数定义。那么对应的 `Observer` 就可以改成：
 
 ```typescript
 const zhihuObserver: Observer = newBlog => {
