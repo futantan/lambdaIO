@@ -52,5 +52,18 @@ module.exports = {
         shortname: `futantan`,
       },
     },
+    {
+      resolve: `gatsby-source-notion-database`,
+      options: {
+        sourceConfig: [
+          {
+            name: 'posts',
+            table:
+              'https://www.notion.so/futantan/ae2dfc3b4b4247179bf94de83d36b99b?v=d536a0bcc9ce4e898d645a748c517b67',
+            cacheType: 'html',
+          },
+        ],
+      },
+    },
   ],
 }

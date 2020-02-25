@@ -4,14 +4,17 @@ import dayjs from 'dayjs'
 import SEO from '../components/SEO'
 
 const Index = props => {
-  const { edges } = props.data.allMarkdownRemark
+  const { edges: mdEdges } = props.data.allMarkdownRemark
+  const { edges: notionEdges } = props.data.allPosts
+  const nodes = [
+    ...notionEdges.map(v => v.node),
+    ...mdEdges.map(v => v.node.frontmatter),
+  ]
+
   return (
     <>
       <SEO />
-      {edges.map(edge => {
-        const {
-          frontmatter: { path, title, date },
-        } = edge.node
+      {nodes.map(({ path, title, date }) => {
         return (
           <div key={path} className="sm:flex items-center mb-4">
             <div className="mr-3 font-mono text-xs text-gray-500">
@@ -37,6 +40,19 @@ export const query = graphql`
             title
             date
           }
+        }
+      }
+    }
+    allPosts(
+      sort: { order: DESC, fields: date }
+      filter: { status: { eq: "published" } }
+    ) {
+      edges {
+        node {
+          path
+          tags
+          title
+          date
         }
       }
     }
