@@ -10,7 +10,7 @@ const SingleTagIndex = ({ pageContext }) => {
         <ul>
           {posts.map((post, index) => (
             <li key={index}>
-              <Link to={post.path}>{post.title}</Link>
+              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
             </li>
           ))}
         </ul>
