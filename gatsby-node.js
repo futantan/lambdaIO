@@ -21,9 +21,9 @@ const createSingleTagPage = (createPage, tagName, posts) => {
 }
 
 const createTagPages = (createPage, posts) => {
-  const postsByTag = posts.reduce((prev, node) => {
-    if (node.tags) {
-      node.tags.forEach(tag => {
+  const postsByTag = posts.reduce((prev, { node }) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
         prev[tag] = (prev[tag] || []).concat(node)
       })
     }
@@ -38,14 +38,14 @@ const createTagPages = (createPage, posts) => {
 }
 
 const createSinglePost = (createPage, posts, index) => {
-  const path = posts[index].path
+  const path = posts[index].node.frontmatter.path
   createPage({
     path: `blog/${path}`,
     component: blogPostTemplate,
     context: {
       pathSlug: path,
-      prev: index === 0 ? null : posts[index - 1],
-      next: index === posts.length - 1 ? null : posts[index + 1],
+      prev: index === 0 ? null : posts[index - 1].node,
+      next: index === posts.length - 1 ? null : posts[index + 1].node,
     },
   })
 }
@@ -63,30 +63,12 @@ const pagesQuery = `
         }
       }
     }
-    allPosts(
-      sort: { order: DESC, fields: date }
-      filter: { status: { eq: "published" } }
-    ) {
-      edges {
-        node {
-          path
-          tags
-          title
-          date
-        }
-      }
-    }
   }
 `
 
 exports.createPages = ({ graphql, actions: { createPage } }) =>
   graphql(pagesQuery).then(result => {
-    const mdPosts = result.data.allMarkdownRemark.edges.map(
-      v => v.node.frontmatter
-    )
-    const notionPosts = result.data.allPosts.edges.map(v => v.node)
-    const posts = notionPosts.concat(mdPosts)
-
+    const posts = result.data.allMarkdownRemark.edges
     createTagPages(createPage, posts)
     posts.forEach((_, index) => createSinglePost(createPage, posts, index))
   })
