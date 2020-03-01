@@ -166,7 +166,7 @@ obs$.subscribe(observer)
 
 这三个语句职责单一且分明，提供了一种非常好的代码组织方式。
 
-### 问题 1：`Observabe` 是异步的吗？
+### 问题 1：`Observable` 是异步的吗？
 
 看一下其内部实现，这完全取决于它的实现是否是异步调用了 `next`、`error` 和 `complete`。
 
