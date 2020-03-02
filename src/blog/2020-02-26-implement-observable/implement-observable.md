@@ -6,6 +6,10 @@ desc: 自己实现 observable
 path: implement-observable
 ---
 
+<iframe src="//player.bilibili.com/player.html?aid=92737776&cid=158338188&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+> 以下是视频内容的文字版
+
 上帝说，要有代码，于是沐浴焚香，大笔一挥，一个 Hello World
 
 ```js
