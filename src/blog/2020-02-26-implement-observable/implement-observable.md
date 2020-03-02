@@ -6,7 +6,7 @@ desc: 自己实现 observable
 path: implement-observable
 ---
 
-<iframe src="//player.bilibili.com/player.html?aid=92737776&cid=158338188&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.html?aid=92737776&cid=158338188&page=1" style="width: 100%; height: 360px;" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 > 以下是视频内容的文字版
 
