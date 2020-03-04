@@ -1,8 +1,9 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import "katex/dist/katex.min.css"
-import SEO from "../components/SEO";
+import React from 'react'
+import { graphql, Link } from 'gatsby'
+import 'katex/dist/katex.min.css'
+import SEO from '../components/SEO'
 import { Disqus } from 'gatsby-plugin-disqus'
+import { WechatQrCode } from '../components/WechatQrCode/WechatQrCode'
 
 const Template = props => {
   const { markdownRemark } = props.data
@@ -18,16 +19,17 @@ const Template = props => {
   return (
     <>
       <SEO title={title} description={desc} />
-      <main>
+      <main className="relative">
         <h1>{title}</h1>
         <div
           className="blogpost"
           dangerouslySetInnerHTML={{ __html: html }}
-          style={{
-            fontFamily: 'avenir',
-          }}
+          style={{ fontFamily: 'avenir' }}
         />
-        <div className='flex justify-between'>
+
+        <WechatQrCode />
+
+        <div className="flex justify-between">
           {prev && <Link to={'blog/' + prev.frontmatter.path}>上一篇</Link>}
           {next && <Link to={'blog/' + next.frontmatter.path}>下一篇</Link>}
         </div>

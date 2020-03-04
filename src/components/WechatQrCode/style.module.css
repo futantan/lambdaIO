@@ -1,0 +1,20 @@
+.wechat {
+  position: fixed;
+  width: calc((100% - 42rem) / 4);
+  top: 12rem;
+  left: calc((100% - 42rem) / 8);
+  opacity: 0.3;
+}
+.wechat:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .wechat {
+    opacity: 1;
+    display: block;
+    margin: auto;
+    width: 200px;
+    position: static;
+  }
+}
